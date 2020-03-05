@@ -1,0 +1,3 @@
+The goal of this challenge is slightly different than the rest.
+You don't wanna get shell, you want to open/read/write the flag file to 
+stdin by exploiting the program
