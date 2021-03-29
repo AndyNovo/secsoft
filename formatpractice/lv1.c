@@ -6,13 +6,13 @@ void win(void){
 }
 
 int main(void){
-    int key = 1337;
-    char buffer[32];
+    int key = 0xdeadbeef;
+    char buffer[64];
     printf("stack leak: %p\n", &key);
-    fgets(buffer, 32, stdin);
+    fgets(buffer, 64, stdin);
     printf(buffer);
-    if (key == 0xdeadbeef){
+    if (key == 1337){
         win();
     }
-    exit(0);
+    return 0;
 }
